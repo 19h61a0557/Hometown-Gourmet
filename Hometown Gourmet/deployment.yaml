@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: Hometown
+ spec:
+   replicas: 5
+   selector:
+     matchLabels:
+       app: Grocery
+   template:
+     metadata:
+       labels:
+         app: Grocery
+     spec:
+       containers:
+       - name: rapidapi
+         image: jp.icr.io/hometown/gourmet
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000

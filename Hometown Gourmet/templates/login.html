@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form </title>
+    <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style1.css') }}"> -->
+    
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style1.css') }}">
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="user-box">
+                <!-- {% if msg == "Incorrect Password"%}
+                <div class="alert alert-danger" role="alert">
+                    {{ msg }}
+                </div>
+            {% elif msg == "User does not exist" %}
+                <div class="alert alert-primary" role="alert">
+                    {{ msg }}
+                </div>
+            {% endif %} -->
+                <input type="text" name="username" required="username">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required="password">
+                <label>Password</label>
+            </div>
+            <a href="">
+            <button type="submit" >
+            
+                  <span></span>
+                <span></span>
+                <span></span>
+                <span></span>  
+                
+                <!-- <a href="/home">
+            </a> -->
+            submit
+            </button>
+            </a>
+            <div>
+                <!-- Log in as Merchant 
+                <a href="/admin-login"> sign up </a> -->
+                <!-- Do not have an account? -->
+                Sign up as Merchant <a href="/admin-signup"> sign up </a>
+                Sign up as User <a href="/register"> sign up </a>
+                
+            </div>
+            {{msg}}
+        </form>
+    </div>
+    
+    </body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
